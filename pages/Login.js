@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, Linking, Platform, WebView } from 'react-native';
+import { View, Text, Button, Linking, Platform, StyleSheet } from 'react-native';
 
 
 export default class LoginPage extends React.Component {
@@ -28,16 +28,75 @@ export default class LoginPage extends React.Component {
 
 	render() {
 		return (
-			<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start', backgroundColor: 'red' }}>
-				<Button title="Login"
-					onPress={() => this.onLogin()}
-				/>
-				<Button title="Open Market"
-					onPress={() => this.onOpenMarket()}
-				/>
+			<View style={styles.screen}>
+
+				<View style={styles.topMenu}>
+					<Button
+						title="Menu"
+						onPress={() => this.props.navigation.toggleDrawer()}
+					/>
+					<Text style={styles.topMenuText}>Login</Text>
+				</View>
+
+				<View style={styles.content}>
+
+					<View style={styles.buttonWrapper}>
+						<Button
+							title="Login"
+							style={styles.button}
+							onPress={() => this.onLogin()}
+						/>
+					</View>
+					
+					<View style={styles.buttonWrapper}>
+						<Button
+							title="Open Market"
+							style={styles.button}
+							onPress={() => this.onOpenMarket()}
+							/>
+					</View>
+
+				</View>
+
 			</View>
 		);
 	}
 	
 
 }
+
+
+
+let styles = StyleSheet.create({
+	screen :{
+		flex: 1, 
+		marginTop : 24,						//to avoid display under status bar on android
+		justifyContent: 'flex-start', 
+		alignItems: 'stretch',				//children will take 100% width
+		backgroundColor: 'red'
+	},
+	topMenu :{
+		padding: 5,
+		paddingLeft: 15,
+		backgroundColor: "green",
+		flexDirection: "row",
+		justifyContent: 'flex-start', 
+		alignItems: 'center', 
+	},
+	topMenuText :{
+		paddingLeft: 10,
+		fontSize: 17,
+	},
+	content :{
+		flex: 1, 
+		justifyContent: 'flex-start', 
+		alignItems: 'flex-start', 
+		backgroundColor: "blue",
+	},
+	buttonWrapper :{
+		padding: 10,
+		paddingBottom: 0,					//to avoid double padding between buttons
+	},
+	button :{
+	},
+});

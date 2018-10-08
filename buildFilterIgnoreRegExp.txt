@@ -1,0 +1,1 @@
+Running application "main" with appParams: .* development-level warning are ON, performance optimizations are OFF$

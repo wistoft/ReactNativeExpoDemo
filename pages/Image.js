@@ -1,5 +1,8 @@
 import React from 'react';
-import { View, Text, Button, Image } from 'react-native';
+import { View } from 'react-native';
+import Screen from "../UIBasic/Screen";
+import Button from "../UIBasic/Button";
+import Image from "../UIBasic/Image";
 
 
 export default class ImagePage extends React.Component {
@@ -12,18 +15,17 @@ export default class ImagePage extends React.Component {
 
 	render() {
 		return (
-			<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+			<Screen
+					title="Image"
+					onMenuPress={() => this.props.navigation.toggleDrawer()}
+					>
 			
-				<Text>Image</Text>
-				<View style={{flex:0.04}}/>
-
 				<Button title="Show react"
 					onPress={() => {
 						this.setState({urlToShow : this.state.reactUrl})
 
 					}}
 				/>
-				<View style={{flex:0.02}}/>
 
 				<Button
 					title="Show bird"
@@ -31,15 +33,48 @@ export default class ImagePage extends React.Component {
 						this.setState({urlToShow : this.state.birdUrl})
 					}}
 				/>
-				<View style={{flex:0.02}}/>
 
 				<Image
 					source={this.state.urlToShow}
 					style={{width: 100, height: 100}} 
 				/>
-				<View style={{flex:0.02}}/>
 				
-			</View>		
+			</Screen>		
 		);
 	}
+	
+
+	// render() {
+	// 	return (
+	// 		<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+			
+	// 			<Text>Image</Text>
+	// 			<View style={{flex:0.04}}/>
+
+	// 			<Button title="Show react"
+	// 				onPress={() => {
+	// 					this.setState({urlToShow : this.state.reactUrl})
+
+	// 				}}
+	// 			/>
+	// 			<View style={{flex:0.02}}/>
+
+	// 			<Button
+	// 				title="Show bird"
+	// 				onPress={() => {
+	// 					this.setState({urlToShow : this.state.birdUrl})
+	// 				}}
+	// 			/>
+	// 			<View style={{flex:0.02}}/>
+
+	// 			<Image
+	// 				source={this.state.urlToShow}
+	// 				style={{width: 100, height: 100}} 
+	// 			/>
+	// 			<View style={{flex:0.02}}/>
+				
+	// 		</View>		
+	// 	);
+	// }
+
 }

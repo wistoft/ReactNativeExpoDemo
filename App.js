@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation';
 
 import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
-import StylePlayGroundPage from './pages/StylePlayGround';
+import StackNavigation from './pages/StackNavigation';
 import TabNavigationPage from './pages/TabNavigation';
 
 //side menu
@@ -20,8 +20,8 @@ import TabNavigationPage from './pages/TabNavigation';
 		Image: {
 			screen: ImagePage,
 		},
-		StylePlayGround: {
-			screen: StylePlayGroundPage,
+		StackNavigation: {
+			screen: StackNavigation,
 		},
 		TabNavigation: {
 			screen: TabNavigationPage,

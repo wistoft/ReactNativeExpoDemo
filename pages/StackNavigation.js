@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, Text, Button, WebView } from 'react-native';
+import { View, WebView } from 'react-native';
 
 import { createStackNavigator } from 'react-navigation';
+
+import Screen from "../UIBasic/Screen";
+import Button from "../UIBasic/Button";
 
 
 class SubPage extends React.Component {
@@ -16,18 +19,18 @@ class MenuPage extends React.Component {
 
 	onOpenPage(pageName) {
 		const pageToShow = this.pages[pageName];
-		this.props.navigation.navigate('SubPage', {page:pageToShow})
+		this.props.navigation.navigate('SubPage', { page: pageToShow, pageTitle: pageName})
 	}
 		
 	render() {
-
+		
 		//the pages
 
 			this.pages = this.props.screenProps.pages;
 
 		//the dynamic buttons
 
-			const PageButtons = ()=>{
+			const PageButtons = () => {
 				return Object.keys(this.pages).map(pageName => {
 					return (
 						<View
@@ -44,14 +47,14 @@ class MenuPage extends React.Component {
 		//the view
 
 			return (
-				<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
-								
-					<Text>Pages</Text>
-					<View style={{flex:0.04}}/>
+				<Screen
+						title="StackNavigation"
+						onMenuPress={this.props.screenProps.toogleDrawer}
+						>			
 
 					<PageButtons />
 					
-				</View>
+				</Screen>
 			);
 	}
 
@@ -59,11 +62,11 @@ class MenuPage extends React.Component {
 
 
 
-export default class RodPage extends React.Component {
+export default class StackNavigationPage extends React.Component {
 	
 	getPages() {
 		return (
-			{ page1 : (
+			{ Page1 : (
 
 					<WebView
 						style={{flex: 1, backgroundColor: 'blue'}} 
@@ -71,7 +74,7 @@ export default class RodPage extends React.Component {
 					/>
 					
 				)
-			, page2 : (
+			, Page2 : (
 
 					<WebView
 						style={{flex: 1, backgroundColor: 'green'}} 
@@ -79,7 +82,7 @@ export default class RodPage extends React.Component {
 					/>
 					
 				)
-			, page3 : (
+			, Page3 : (
 
 				<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start', backgroundColor: 'red' }}>
 					<Button title="Login"
@@ -101,13 +104,28 @@ export default class RodPage extends React.Component {
 	render() {
 		
 		const StackNavigation = createStackNavigator({
-				Menu: MenuPage,
-				SubPage: SubPage,
+				Menu: {
+					screen: MenuPage,
+					navigationOptions: () => ({
+						header: null,									//hide header on menu page. It has custom.
+					}),
+				},
+				SubPage:  {
+					screen: SubPage,
+					navigationOptions: ({ navigation }) => ({
+						title: navigation.getParam("pageTitle"),
+					}),
+				},
 			},{
 				initialRouteName: 'Menu',
 			}
 		);
 
-		return <StackNavigation screenProps={{pages:this.getPages()}} />;
+		return <StackNavigation screenProps=
+					{{
+						pages: this.getPages(),
+						toogleDrawer: this.props.navigation.toggleDrawer
+					}} 
+				/>;
 	}
 }
