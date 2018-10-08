@@ -6,7 +6,7 @@ import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
 import StackNavigation from './pages/StackNavigation';
-import TabNavigationPage from './pages/TabNavigation';
+
 
 //side menu
 
@@ -22,9 +22,6 @@ import TabNavigationPage from './pages/TabNavigation';
 		},
 		StackNavigation: {
 			screen: StackNavigation,
-		},
-		TabNavigation: {
-			screen: TabNavigationPage,
 		},
 	});
 

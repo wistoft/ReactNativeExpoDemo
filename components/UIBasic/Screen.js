@@ -42,15 +42,17 @@ let styles = StyleSheet.create({
 		marginTop : 24,						//to avoid display under status bar on android
 		justifyContent: 'flex-start', 
 		alignItems: 'stretch',				//children will take 100% width
-		backgroundColor: 'red'
+
 	},
 	topMenu :{
 		padding: 5,
 		paddingLeft: 15,
-		backgroundColor: "green",
 		flexDirection: "row",
 		justifyContent: 'flex-start', 
 		alignItems: 'center', 
+		borderBottomWidth: 1,
+		borderColor: "#ddd",
+		backgroundColor: "#eee",
 	},
 	topMenuText :{
 		paddingLeft: 10,
@@ -60,6 +62,6 @@ let styles = StyleSheet.create({
 		flex: 1, 
 		justifyContent: 'flex-start', 
 		alignItems: 'flex-start', 
-		backgroundColor: "blue",
+
 	},
 });
