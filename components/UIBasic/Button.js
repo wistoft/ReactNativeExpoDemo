@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 import { View, Button as ReactNativeButton, StyleSheet } from 'react-native';
 
 
-/*
- * props:
- * 	title
- */
 export default class Button extends React.Component {
+
+	static propTypes = {
+		title: PropTypes.string.isRequired,
+	}
 
 	render() {
 		return (

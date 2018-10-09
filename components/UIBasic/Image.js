@@ -1,11 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 import { Image as ReactNativeImage, StyleSheet } from 'react-native';
 
-
-/*
- * props:
- * 	title
- */
+//expects same props as react native image
 export default class Image extends React.Component {
 
 	render() {

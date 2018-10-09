@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 import { View, Text, Button, StyleSheet } from 'react-native';
 
 
-/*
- * props:
- * 	title
- * 	onMenuPress
- */
 export default class Screen extends React.Component {
+
+	static propTypes = {
+		title: PropTypes.string.isRequired,
+		onMenuPress: PropTypes.func.isRequired,
+		children: PropTypes.node.isRequired,
+	}
 
 	render() {
 		return (
