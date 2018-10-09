@@ -96,7 +96,7 @@ export default class LoginPage extends React.Component {
 			return (
 				<Screen
 						title="Login"
-						onMenuPress={() => this.props.navigation.toggleDrawer()}
+						onMenuPress={this.props.navigation.toggleDrawer}
 						>
 
 					{authorizedContent}

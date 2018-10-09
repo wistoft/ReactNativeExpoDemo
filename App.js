@@ -5,7 +5,8 @@ import { createDrawerNavigator } from 'react-navigation';
 import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
-import StackNavigation from './pages/StackNavigation';
+import StackNavigationPage from './pages/StackNavigation';
+import UtilPage from './pages/Util';
 
 
 //on ready
@@ -25,9 +26,15 @@ import StackNavigation from './pages/StackNavigation';
 			screen: ImagePage,
 		},
 		StackNavigation: {
-			screen: StackNavigation,
+			screen: StackNavigationPage,
 		},
-	});
+		Util: {
+			screen: UtilPage,
+		},
+	},{
+		initialRouteName: 'Util',
+	}
+	);
 
 
 //component
