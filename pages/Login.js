@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Linking, Platform, StyleSheet } from 'react-native';
+import { View, Text, Linking, Platform, AsyncStorage, BackHandler } from 'react-native';
 
 import Screen from "../components/UIBasic/Screen";
 import Button from "../components/UIBasic/Button";
@@ -8,7 +8,25 @@ import Button from "../components/UIBasic/Button";
 export default class LoginPage extends React.Component {
 
 	state = {
-		authorized: false
+		authorized: false,
+		authorizedUnStored: false,
+	}
+
+	constructor() {
+		super();
+				
+		AsyncStorage.getItem('authorized')
+			.then(data => {
+				if (data === "true"){
+					this.setState({authorized:true});
+				}else if (data === "false"){
+					this.setState({authorized:false});
+				} else {
+					this.setState({authorized:false});
+				}
+			})
+			;
+
 	}
 
 	onOpenMarket() {
@@ -26,27 +44,72 @@ export default class LoginPage extends React.Component {
 	}
 
 	onLogin() {
-		console.log("todo");
+		AsyncStorage.setItem('authorized',"true");
+		this.setState({authorized:true, authorizedUnStored:true});
 	}
+	
+	onLogout() {
+		AsyncStorage.setItem('authorized',"false");
+		this.setState({authorized:false, authorizedUnStored: false});
+	}
+	
 
 	render() {
-		return (
-			<Screen
-					title="Login"
-					onMenuPress={() => this.props.navigation.toggleDrawer()}
-					>
 
-				<Button
-					title="Login"
-					onPress={() => this.onLogin()}
-				/>
-				<Button
-					title="Open Market"
-					onPress={() => this.onOpenMarket()}
-					/>
+		//content
+		
+			const authorizedContent = this.state.authorized ?
+				(
 
-			</Screen>
-		);
+					<View style={{  alignItems: "flex-start" }} >
+
+						<Text>You are Logged in.</Text>
+	
+						<Button
+							title="Logout"
+							onPress={() => this.onLogout()}
+						/>
+
+						<Button
+							title="Open Market"
+							onPress={() => this.onOpenMarket()}
+							/>
+
+					</View>
+
+				):(
+
+					<View>
+		
+						<Button
+							title="Login"
+							onPress={() => this.onLogin()}
+						/>
+
+					</View>
+				);
+
+
+				
+		//screen
+
+			return (
+				<Screen
+						title="Login"
+						onMenuPress={() => this.props.navigation.toggleDrawer()}
+						>
+
+					{authorizedContent}
+
+					<View style={{ flex: 1, width:"100%", justifyContent: "flex-end", alignItems: "flex-end" }} >
+	
+						<Text>{"stored state: " + this.state.authorized}</Text>
+						<Text>{"unstored state: " + this.state.authorizedUnStored}</Text>
+
+					</View>
+	
+				</Screen>
+			);
 	}
 	
 
