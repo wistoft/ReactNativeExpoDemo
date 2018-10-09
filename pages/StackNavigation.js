@@ -66,37 +66,21 @@ export default class StackNavigationPage extends React.Component {
 	
 	getPages() {
 		return (
-			{ Page1 : (
+			{ IFrame1 : (
 
 					<WebView
-						style={{flex: 1, backgroundColor: 'blue'}} 
+						style={{flex: 1, backgroundColor: 'green'}} 
 						source={{uri: 'https://player.vimeo.com/video/255698341'}}
 					/>
 					
 				)
-			, Page2 : (
+			, IFrame2 : (
 
 					<WebView
 						style={{flex: 1, backgroundColor: 'green'}} 
 						source={{ html: '<iframe src="https://player.vimeo.com/video/255698341" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' }}
 					/>
 					
-				)
-			, Page3 : (
-
-				<View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'flex-start', backgroundColor: 'red' }}>
-					<Button title="Login"
-						onPress={() => this.onLogin()}
-					/>
-					<Button title="Open Market"
-						onPress={() => this.onOpenMarket()}
-					/>
-					<WebView
-						style={{width: 300, height: 300, backgroundColor: 'green'}} 
-						source={{uri: 'https://player.vimeo.com/video/255698341'}}
-					/>
-				</View>
-
 				)
 			})
 	}

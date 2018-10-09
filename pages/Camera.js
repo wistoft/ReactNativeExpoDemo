@@ -20,7 +20,7 @@ export default class CameraPage extends React.Component {
 		
 		if (!this.state.hasCameraPermission) {
 			
-			return <Text>No access to camera</Text>;
+			return <Text>No ac cess to camera</Text>;
 
 		} else {
 
