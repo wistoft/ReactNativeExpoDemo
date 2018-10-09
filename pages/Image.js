@@ -17,7 +17,7 @@ export default class ImagePage extends React.Component {
 		return (
 			<Screen
 					title="Image"
-					onMenuPress={() => this.props.navigation.toggleDrawer()}
+					onMenuPress={this.props.navigation.toggleDrawer}
 					>
 			
 				<Button title="Show react"

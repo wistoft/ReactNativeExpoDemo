@@ -8,6 +8,10 @@ import ImagePage from './pages/Image';
 import StackNavigation from './pages/StackNavigation';
 
 
+//on ready
+
+	console.log("loading.");
+
 //side menu
 
 	const DrawerNavigation = createDrawerNavigator({

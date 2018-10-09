@@ -1,0 +1,8 @@
+[16:29:28] Finished building JavaScript bundle in 124ms.
+[16:19:29] Starting project at C:\Darhadni\htdocs\ReactNativeDemo
+[16:19:38] Starting Metro Bundler on port 19001.
+[16:19:38] Metro Bundler ready.
+[16:19:39] Successfully ran `adb reverse`. Localhost URLs should work on the connected Android device.
+[16:19:39] Expo DevTools is running at http://localhost:19002
+[16:19:39] Your app is running at exp://10.130.16.145:19000
+Logs for your project will appear below. Press Ctrl+C to exit.
