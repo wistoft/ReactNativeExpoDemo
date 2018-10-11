@@ -34,13 +34,15 @@ export default class CameraPage extends React.Component {
 
 	//shows the picture.
 	renderPictureView() {
-		return	<View style={{ flex: 1 }}>
-					<Text>What a picture!</Text>
-					<Image
-						source={{uri: this.state.dataUrl}}
-						style={{flex: 1}} 
-					/>
-				</View>
+		return	(
+			<View style={{ flex: 1 }}>
+				
+				<Text>What a picture!</Text>
+				
+				<Image source={{uri: this.state.dataUrl}} style={{flex: 1}} />
+
+			</View>
+		)
 	}
 
 	async takePicture() {
@@ -88,14 +90,14 @@ export default class CameraPage extends React.Component {
 									});
 								}}
 							>
+							
 							<Text
 								style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
 								{' '}Flip{' '}
 							</Text>
-							<Button
-								title="Snap"
-								onPress={this.takePicture.bind(this)}
-							/>
+							
+							<Button title="Snap" onPress={this.takePicture.bind(this)} />
+
 						</TouchableOpacity>
 					</View>
 				</Camera>

@@ -31,30 +31,15 @@ export default class UtilPage extends React.Component {
 	render() {
 		
 		return (
-			<Screen
-					title="Util"
-					onMenuPress={this.props.navigation.toggleDrawer}
-					>
+			<Screen title="Util" onMenuPress={this.props.navigation.toggleDrawer} >
 				
-				<Button
-					title="throw Error"
-					onPress={this.throwError}
-				/>
+				<Button title="throw Error" onPress={this.throwError} />
 				
-				<Button
-					title="reject promise"
-					onPress={this.rejectPromise}
-				/>
+				<Button title="reject promise" onPress={this.rejectPromise} />
 				
-				<Button
-					title="reject promise distant"
-					onPress={this.rejectPromiseDistant}
-				/>
+				<Button title="reject promise distant" onPress={this.rejectPromiseDistant} />
 				
-				<Button
-					title="reject promise distant local code"
-					onPress={this.rejectPromiseDistantLocalCode}
-				/>
+				<Button title="reject promise distant local code" onPress={this.rejectPromiseDistantLocalCode} />
 
 			</Screen>
 		); 

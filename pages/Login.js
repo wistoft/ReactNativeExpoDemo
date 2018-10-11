@@ -65,15 +65,9 @@ export default class LoginPage extends React.Component {
 
 						<Text>You are Logged in.</Text>
 	
-						<Button
-							title="Logout"
-							onPress={() => this.onLogout()}
-						/>
+						<Button title="Logout" onPress={() => this.onLogout()} />
 
-						<Button
-							title="Open Market"
-							onPress={() => this.onOpenMarket()}
-							/>
+						<Button title="Open Market" onPress={() => this.onOpenMarket()} />
 
 					</View>
 
@@ -81,10 +75,7 @@ export default class LoginPage extends React.Component {
 
 					<View>
 		
-						<Button
-							title="Login"
-							onPress={() => this.onLogin()}
-						/>
+						<Button title="Login" onPress={() => this.onLogin()} />
 
 					</View>
 				);
@@ -94,10 +85,7 @@ export default class LoginPage extends React.Component {
 		//screen
 
 			return (
-				<Screen
-						title="Login"
-						onMenuPress={this.props.navigation.toggleDrawer}
-						>
+				<Screen title="Login" onMenuPress={this.props.navigation.toggleDrawer} >
 
 					{authorizedContent}
 

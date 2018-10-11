@@ -30,15 +30,12 @@ class MenuPage extends React.Component {
 
 		//the dynamic buttons
 
-			const PageButtons = () => {
+			const pageButtons = () => {
 				return Object.keys(this.pages).map(pageName => {
 					return (
 						<View
 							key={pageName}>
-							<Button title={pageName}
-								onPress={() => this.onOpenPage(pageName)}
-								/>
-							<View style={{flex:0.02}}/>
+							<Button title={pageName} onPress={() => this.onOpenPage(pageName)} />
 						</View>
 					);
 				});
@@ -47,12 +44,9 @@ class MenuPage extends React.Component {
 		//the view
 
 			return (
-				<Screen
-						title="StackNavigation"
-						onMenuPress={this.props.screenProps.toogleDrawer}
-						>			
+				<Screen title="StackNavigation"	onMenuPress={this.props.screenProps.toogleDrawer} >			
 
-					<PageButtons />
+					<pageButtons />
 					
 				</Screen>
 			);
