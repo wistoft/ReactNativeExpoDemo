@@ -42,9 +42,7 @@ let styles = StyleSheet.create({
 	screen :{
 		flex: 1, 
 		marginTop : 24,						//to avoid display under status bar on android
-		justifyContent: 'flex-start', 
-		alignItems: 'stretch',				//children will take 100% width
-		backgroundColor: "green",
+		//backgroundColor: "green",
 
 	},
 	topMenu :{
