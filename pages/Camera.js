@@ -38,13 +38,17 @@ export default class CameraPage extends React.Component {
 	//shows the picture.
 	renderPictureView() {
 		return	(
-			<View style={{ flex: 1 }}>
+			<Screen title="Login" onMenuPress={this.props.navigation.toggleDrawer} 
+					style={{
+						alignItems: 'flex-start',
+					}}
+				>
 				
 				<Text>What a picture!</Text>
 				
 				<Image source={{uri: this.state.dataUrl}} style={{flex: 1}} />
 
-			</View>
+			</Screen>
 		)
 	}
 
