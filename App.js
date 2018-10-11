@@ -6,6 +6,7 @@ import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
 import PlayAudio from './pages/PlayAudio';
+import Video from './pages/Video';
 import StackNavigationPage from './pages/StackNavigation';
 import UtilPage from './pages/Util';
 
@@ -29,6 +30,9 @@ import UtilPage from './pages/Util';
 		PlayAudio: {
 			screen: PlayAudio,
 		},
+		Video: {
+			screen: Video,
+		},
 		StackNavigation: {
 			screen: StackNavigationPage,
 		},
@@ -36,7 +40,7 @@ import UtilPage from './pages/Util';
 			screen: UtilPage,
 		},
 	},{
-		initialRouteName: 'Util',
+		initialRouteName: 'Video',
 	}
 	);
 
