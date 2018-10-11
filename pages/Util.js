@@ -31,7 +31,11 @@ export default class UtilPage extends React.Component {
 	render() {
 		
 		return (
-			<Screen title="Util" onMenuPress={this.props.navigation.toggleDrawer} >
+			<Screen title="Util" onMenuPress={this.props.navigation.toggleDrawer}
+					style={{
+						alignItems: 'flex-start',
+					}}
+				>
 				
 				<Button title="throw Error" onPress={this.throwError} />
 				

@@ -85,7 +85,11 @@ export default class LoginPage extends React.Component {
 		//screen
 
 			return (
-				<Screen title="Login" onMenuPress={this.props.navigation.toggleDrawer} >
+				<Screen title="Login" onMenuPress={this.props.navigation.toggleDrawer} 
+						style={{
+							alignItems: 'flex-start',
+						}}
+					>
 
 					{authorizedContent}
 

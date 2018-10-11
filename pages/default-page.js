@@ -18,6 +18,9 @@ export default class Page extends React.Component {
 			<Screen
 					title="PageTitle"
 					onMenuPress={this.props.navigation.toggleDrawer}
+					style={{
+						alignItems: 'flex-start', 		//default is stretch
+					}}
 				>
 
 				<Text>Default Page</Text>

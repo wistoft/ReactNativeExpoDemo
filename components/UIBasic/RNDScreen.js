@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
 
+//the content area has {flex: 1}, but otherwise default styling.
+//styles for the screen component, will apply to the content area. Not to top menu.
 export default class Screen extends React.Component {
 
 	static propTypes = {
@@ -24,7 +26,7 @@ export default class Screen extends React.Component {
 					<Text style={styles.topMenuText}>{this.props.title}</Text>
 				</View>
 
-				<View style={styles.content}>
+				<View style={[{flex: 1}, this.props.style]}>
 
 					{this.props.children}
 
@@ -58,12 +60,5 @@ let styles = StyleSheet.create({
 	topMenuText :{
 		paddingLeft: 10,
 		fontSize: 17,
-	},
-	content :{
-		flex: 1, 
-		justifyContent: 'flex-start', 
-		alignItems: 'flex-start', 
-		backgroundColor: "red",
-
 	},
 });

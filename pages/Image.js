@@ -15,7 +15,11 @@ export default class ImagePage extends React.Component {
 
 	render() {
 		return (
-			<Screen title="Image" onMenuPress={this.props.navigation.toggleDrawer} >
+			<Screen title="Image" onMenuPress={this.props.navigation.toggleDrawer}
+					style={{
+						alignItems: 'flex-start', 
+					}}
+				>
 			
 				<Button title="Show react"
 					onPress={() => {
