@@ -5,6 +5,7 @@ import { createDrawerNavigator } from 'react-navigation';
 import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
+import PlayAudio from './pages/PlayAudio';
 import StackNavigationPage from './pages/StackNavigation';
 import UtilPage from './pages/Util';
 
@@ -24,6 +25,9 @@ import UtilPage from './pages/Util';
 		},
 		Image: {
 			screen: ImagePage,
+		},
+		PlayAudio: {
+			screen: PlayAudio,
 		},
 		StackNavigation: {
 			screen: StackNavigationPage,
