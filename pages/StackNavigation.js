@@ -3,8 +3,8 @@ import { View, WebView } from 'react-native';
 
 import { createStackNavigator } from 'react-navigation';
 
-import Screen from "../components/UIBasic/Screen";
-import Button from "../components/UIBasic/Button";
+import Screen from "../components/UIBasic/RNDScreen";
+import Button from "../components/UIBasic/RNDButton";
 
 
 class SubPage extends React.Component {

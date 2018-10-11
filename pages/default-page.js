@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 
-import Screen from "../components/UIBasic/Screen";
-import Button from "../components/UIBasic/Button";
-import Image from "../components/UIBasic/Image";
+import Screen from "../components/UIBasic/RNDScreen";
+import Button from "../components/UIBasic/RNDButton";
+import Image from "../components/UIBasic/RNDImage";
 
 export default class Page extends React.Component {
 

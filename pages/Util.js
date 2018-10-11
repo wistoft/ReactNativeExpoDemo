@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import Screen from "../components/UIBasic/Screen";
-import Button from "../components/UIBasic/Button";
+import Screen from "../components/UIBasic/RNDScreen";
+import Button from "../components/UIBasic/RNDButton";
 
 import * as Util from "../services/UtilService";
 

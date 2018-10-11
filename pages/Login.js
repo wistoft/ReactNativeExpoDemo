@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Linking, Platform, AsyncStorage, BackHandler } from 'react-native';
 
-import Screen from "../components/UIBasic/Screen";
-import Button from "../components/UIBasic/Button";
+import Screen from "../components/UIBasic/RNDScreen";
+import Button from "../components/UIBasic/RNDButton";
 
 
 export default class LoginPage extends React.Component {

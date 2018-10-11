@@ -2,6 +2,9 @@ import React from 'react';
 import { Text, View, TouchableOpacity, Button, Image } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
+import Screen from "../components/UIBasic/RNDScreen";
+
+
 export default class CameraPage extends React.Component {
 
 	state = {
