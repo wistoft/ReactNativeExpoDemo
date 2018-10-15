@@ -7,7 +7,10 @@ import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
 import PlayAudio from './pages/PlayAudio';
 import RecordAudio from './pages/RecordAudio';
-import Video from './pages/Video';
+import VideoPage from './pages/Video';
+import PushNotificationPage from './pages/PushNotification';
+import PermissionsPage from './pages/Permissions';
+import InternetPage from './pages/Internet';
 import StackNavigationPage from './pages/StackNavigation';
 import UtilPage from './pages/Util';
 
@@ -34,8 +37,17 @@ import UtilPage from './pages/Util';
 		RecordAudio: {
 			screen: RecordAudio,
 		},
+		PushNotification: {
+			screen: PushNotificationPage,
+		},
 		Video: {
-			screen: Video,
+			screen: VideoPage,
+		},
+		Permissions: {
+			screen: PermissionsPage,
+		},
+		Internet: {
+			screen: InternetPage,
 		},
 		StackNavigation: {
 			screen: StackNavigationPage,
@@ -44,8 +56,10 @@ import UtilPage from './pages/Util';
 			screen: UtilPage,
 		},
 	},{
-		initialRouteName: 'RecordAudio',
+		initialRouteName: 'Internet',
 	}
+
+	
 	);
 
 
