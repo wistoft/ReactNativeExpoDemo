@@ -28,7 +28,8 @@ export default class Page extends React.Component {
 
 	}
 	
-	
+	//Fullscreen only supports portrait mode.
+	// This rotates the video, but not in fullscreen mode. Transform: [{rotate: '90deg'}]
 	render() {
 		return (
 			<RNDScreen
@@ -69,7 +70,6 @@ export default class Page extends React.Component {
 					volume={1.0}
 					isMuted={false}
 					resizeMode="cover"
-					shouldPlay
 					isLooping
 					style={{ width: 300, height: 300 }}
 				/>

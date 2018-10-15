@@ -7,7 +7,7 @@ import Screen from "../components/UIBasic/RNDScreen";
 import Button from "../components/UIBasic/RNDButton";
 import Image from "../components/UIBasic/RNDImage";
 
-export default class Page extends React.Component {
+export default class PlayAudioPage extends React.Component {
 
 	constructor(){
 		super();
@@ -22,6 +22,7 @@ export default class Page extends React.Component {
 	}
 	
 	onPlay = () => {
+		//Actually, ensure load has finished here.
 		this.soundObject.playAsync();
 	}
 	

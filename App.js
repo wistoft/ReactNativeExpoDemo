@@ -22,44 +22,42 @@ import UtilPage from './pages/Util';
 //side menu
 
 	const DrawerNavigation = createDrawerNavigator({
-		Login: {
-			screen: LoginPage,
-		},
-		Camera: {
-			screen: CameraPage,
-		},
-		Image: {
-			screen: ImagePage,
-		},
-		PlayAudio: {
-			screen: PlayAudio,
-		},
-		RecordAudio: {
-			screen: RecordAudio,
-		},
-		PushNotification: {
-			screen: PushNotificationPage,
-		},
-		Video: {
-			screen: VideoPage,
-		},
-		Permissions: {
-			screen: PermissionsPage,
-		},
-		Internet: {
-			screen: InternetPage,
-		},
-		StackNavigation: {
-			screen: StackNavigationPage,
-		},
-		Util: {
-			screen: UtilPage,
-		},
-	},{
-		initialRouteName: 'Internet',
-	}
-
-	
+			Login: {
+				screen: LoginPage,
+			},
+			Camera: {
+				screen: CameraPage,
+			},
+			Image: {
+				screen: ImagePage,
+			},
+			PlayAudio: {
+				screen: PlayAudio,
+			},
+			RecordAudio: {
+				screen: RecordAudio,
+			},
+			PushNotification: {
+				screen: PushNotificationPage,
+			},
+			Video: {
+				screen: VideoPage,
+			},
+			Permissions: {
+				screen: PermissionsPage,
+			},
+			Internet: {
+				screen: InternetPage,
+			},
+			"StackNavigation/iFrame": {
+				screen: StackNavigationPage,
+			},
+			Util: {
+				screen: UtilPage,
+			},
+		},{
+			initialRouteName: 'Internet',
+		}
 	);
 
 
