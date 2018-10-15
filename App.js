@@ -6,6 +6,7 @@ import LoginPage from './pages/Login';
 import CameraPage from './pages/Camera';
 import ImagePage from './pages/Image';
 import PlayAudio from './pages/PlayAudio';
+import RecordAudio from './pages/RecordAudio';
 import Video from './pages/Video';
 import StackNavigationPage from './pages/StackNavigation';
 import UtilPage from './pages/Util';
@@ -30,6 +31,9 @@ import UtilPage from './pages/Util';
 		PlayAudio: {
 			screen: PlayAudio,
 		},
+		RecordAudio: {
+			screen: RecordAudio,
+		},
 		Video: {
 			screen: Video,
 		},
@@ -40,7 +44,7 @@ import UtilPage from './pages/Util';
 			screen: UtilPage,
 		},
 	},{
-		initialRouteName: 'Video',
+		initialRouteName: 'RecordAudio',
 	}
 	);
 
